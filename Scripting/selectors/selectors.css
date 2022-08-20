@@ -1,0 +1,54 @@
+body
+{
+    background-color: lightyellow;
+}
+
+h1, h2, h3
+{
+    color: green;
+}
+
+nav
+{
+    background-color: lightgreen;
+}
+
+nav li
+{
+    display: inline-block;
+    padding: 1.5em;
+    font-size: large;
+}
+
+#secondMenu
+{
+    background-color: orange;
+}
+
+#secondMenu li
+{
+    display: inline-block;
+    padding: 1.5em;
+    font-size: large;
+    color: white;
+}
+
+.special
+{
+    color: orange;
+}
+
+h1.special
+{
+    border-bottom: 1px solid orange;
+}
+
+:link
+{
+    color: orange;
+}
+
+:visited
+{
+    color: yellow;
+}

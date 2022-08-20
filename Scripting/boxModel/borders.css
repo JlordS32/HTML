@@ -1,0 +1,52 @@
+body
+{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aliceblue;
+}
+
+header
+{
+    background-color: darkgray;
+    color: white;
+}
+
+h1
+{
+    border-top-color: white;
+    border-top-style: dashed;
+    border-top-width: 5px;
+}
+
+section
+{
+    /*border-left-color: green;
+    border-left-style: dotted;
+    border-right-width: 0.3em;*/
+    border: green solid 10px;
+}
+
+header
+{
+    border-right-color: cyan;
+    border-right-style: solid;
+    border-right-width: 10px;
+}
+
+p
+{
+    border-bottom: rosybrown double 15px;
+}
+
+footer
+{
+    border-top: blue groove 20px;
+    border-right: orange inset 0.5em;
+    border-right: darkred ridge 15px;
+    border-bottom: pink outset 20px;
+}
+
+li
+{
+    border: blanchedalmond groove 5px;
+    border-radius: 10px;    
+}

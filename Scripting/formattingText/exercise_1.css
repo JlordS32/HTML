@@ -1,0 +1,26 @@
+body
+{
+    background-color: rgb(177, 226, 245);
+}
+h1
+{
+    color: rgb(27, 27, 202);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2
+{
+    color: rgb(143, 24, 143);
+}
+p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+}
+strong
+{
+    color: red;
+}
+em
+{
+    color: green;
+}

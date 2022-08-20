@@ -1,0 +1,45 @@
+*
+{
+    margin: 0;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    background-color: aquamarine;
+}
+
+h2
+{
+    background-color: tomato;
+}
+
+h3
+{
+    background-color: wheat;
+}
+
+p
+{
+    background-color: gray;
+    padding: 10px;
+}
+
+ul
+{
+    background-color: skyblue;
+    margin: 10px;
+    border: palegreen solid 10px;
+}
+
+li
+{
+    background-color: burlywood;
+    padding: 5px;
+    border: red solid 5px;
+
+}

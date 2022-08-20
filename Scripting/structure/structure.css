@@ -1,0 +1,50 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header
+{
+    color: #FFFFFF;
+    background-color: black;
+}
+
+footer
+{
+    background-color: darkslategray;
+    font-size: 80%;
+    color: white;
+}
+
+div
+{
+    background-color: plum;
+}
+
+nav
+{
+    background-color: pink;
+}
+
+section
+{
+background-color: #8894A2;
+}
+
+a:hover
+{
+    color: whitesmoke;
+}
+
+a:focus
+{
+    color: purple;
+}
+
+a:visited
+{
+    color: gray;
+}
+
+
+
