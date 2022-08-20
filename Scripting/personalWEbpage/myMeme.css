@@ -1,0 +1,100 @@
+body
+{
+    background-color: bisque;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.body
+{ 
+    width: 800px;
+    height: 500px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 60%;
+    border-bottom-right-radius: 60%;
+    border-bottom-left-radius: 50%;
+    background-color: white;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: baseline;
+}
+
+.head
+{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    right: 815px;
+    top: 25px;
+}
+
+.eyesLeft, .eyesRight
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    top: 150px;
+}
+
+.eyesRight
+{
+    left: 55px;
+}
+
+.eyesLeft
+{
+    left: 160px;
+}
+
+.mouth
+{
+    width: 100px;
+    height: 50px;
+    background-color: pink;
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 110px;
+    border: black 5px solid;
+    position: relative;
+    top: 250px;
+    right: 30px;
+}
+
+.blush1, .blush2
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    top: 150px;
+}
+
+.blush1
+{
+    right: 100px;
+    box-shadow: 120px 100px 70px 10px lightpink;
+}
+
+.blush2
+{
+    right: 470px;
+    box-shadow: 120px 100px 75px 10px lightpink;
+}
+
+
