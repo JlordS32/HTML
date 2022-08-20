@@ -5,5 +5,57 @@
 
 body
 {
-    color: black;
+    background-color: #0E6BA8;
+}
+
+h1
+{
+    text-align: center;
+    color: white;
+    background-color: #5AA6D1;
+    font-size: 40px;
+    padding: 10px 0%;
+}
+
+li
+{
+    display: inline-block;
+    padding: 0px 50px;
+    font-size: 25px;
+    color: aliceblue;
+    border: #0A2472 solid 10px;
+}
+
+#menubar
+{
+    text-align: center;
+    background-color: #93D3F0;
+}
+
+h2
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+
+footer
+{
+    text-align: center;
+}
+
+p
+{
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    padding: 0% 20%;
+}
+
+
+#footerend
+{
+    padding-top: 50px;
 }
