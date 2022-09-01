@@ -1,7 +1,6 @@
 *
 {
     margin: 0;
-    outline: 1px solid red;
 }
 
 body
@@ -10,10 +9,18 @@ body
     justify-content: center;
 }
 
+header
+{
+    background-color: #8E44AD;
+}
+
 header h1
 {
     display: flex;
     justify-content: center;
+    font-size: 50px;
+    color: white;
+    padding: 10px;
 }
 
 main
@@ -22,13 +29,19 @@ main
     display: flex;
 }
 
-section
+#calcContainer
 {
-    width: 500px;
-    height: 500px;
-    position: relative;
-    display: flex;
+    width: 400px;
+    height: 800px;
+}
+
+#calcSection
+{
+    display: inline-flex;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    flex-direction: row;
 }
 
 .calcBtn
@@ -36,5 +49,25 @@ section
     display: inline-flex;
     flex-direction: row;
     height: 100px;
+    width: 100px;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    background-color: #AF7AC5;
+    font-size: 30px;
+    margin: 5px;
+    border-radius: 25%;
+
+}
+
+#calcTxtBoxID
+{
     width: 300px;
+    height: 50px;
+    outline: #8E44AD;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    border-top-left-radius: 10%;
 }
