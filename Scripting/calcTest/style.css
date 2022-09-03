@@ -87,7 +87,7 @@ body
 }
 
 
-#operatorBtn
+.operatorBtn
 {
     background-color: #9B59B6;
 }
@@ -99,14 +99,14 @@ body
 }
 
 
-.calcButtons:hover, #equalBtn:hover, #clearBtn:hover, #operatorBtn:hover,  #decimalBtn:hover
+.calcButtons:hover, #equalBtn:hover, #clearBtn:hover, .operatorBtn:hover,  #decimalBtn:hover
 {
     background-color: white;
     color: black;
     border: 1px black solid;
 }
 
-.calcButtons:active, #equalBtn:active, #clearBtn:active, #operatorBtn:active,  #decimalBtn:active
+.calcButtons:active, #equalBtn:active, #clearBtn:active, .operatorBtn:active,  #decimalBtn:active
 {
     background-color: #C39BD3;
     color: white;

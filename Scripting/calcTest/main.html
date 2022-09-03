@@ -17,9 +17,9 @@
                 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
 
                 <div class="calcBtn">
-                    <button class="calcButtons" id="operatorBtn">/</button>
+                    <button class="calcButtons operatorBtn">/</button>
                     <button class="calcButtons" id="clearBtn">AC</button>
-                    <button class="calcButtons" id="operatorBtn">*</button>
+                    <button class="calcButtons operatorBtn">*</button>
                     <button class="calcButtons" id="7">7</button>
                     <button class="calcButtons" id="8">8</button>
                     <button class="calcButtons" id="9">9</button>
@@ -29,16 +29,19 @@
                     <button class="calcButtons" id="1">1</button>
                     <button class="calcButtons" id="2">2</button>
                     <button class="calcButtons" id="3">3</button>
-                    <button class="calcButtons" id="operatorBtn">-</button>
+                    <button class="calcButtons operatorBtn">-</button>
                     <button class="calcButtons" id="0">0</button>
-                    <button class="calcButtons" id="operatorBtn">+</button>
+                    <button class="calcButtons operatorBtn">+</button>
 
                     <button class="calcButtons" id="equalBtn">=</button>
                     <button class="calcButtons" id="decimalBtn">.</button>
+                    <button id="justAButton"></button>
                 </div>
             </section>
         </div>
     </div>
+
+
 
     <script src="script.js"></script>
 </body>

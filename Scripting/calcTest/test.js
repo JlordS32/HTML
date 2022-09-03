@@ -2,7 +2,13 @@
 
 let textbox = document.getElementById("calcTxtBoxID");
 
-let numberButtons = Array.from(document.getElementsByClassName("calcButtons"));
+let numberButtons = Array.from(document.getElementsByClassName("justAButton"));
+
+let someButtons = document.getElementById("1");
+
+someButtons.addEventListener('click', () => {
+
+});
 
 let count = 0;
 numberButtons.map( x => {
