@@ -8,28 +8,38 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <main id="calcMain">
-        <section id="calcContainer">
-            <section id="calcSection">
-                <input type="text" name="txtBox" id="calcTxtBoxID"/>
-                <input type="submit" value="1" name="btnNum1" class="calcBtn"/>
-                <input type="submit" value="2" name="btnNum2" class="calcBtn"/>
-                <input type="submit" value="3" name="btnNum3" class="calcBtn"/>
-                <input type="submit" value="4" name="btnNum4" class="calcBtn"/>
-                <input type="submit" value="5" name="btnNum5" class="calcBtn"/>
-                <input type="submit" value="6" name="btnNum6" class="calcBtn"/>
-                <input type="submit" value="7" name="btnNum7" class="calcBtn"/>
-                <input type="submit" value="8" name="btnNum8" class="calcBtn"/>
-                <input type="submit" value="9" name="btnNum9" class="calcBtn"/>
-                <input type="submit" value="+" name="btnNumAdd" class="calcBtn"/>
-                <input type="submit" value="-" name="btnNumSub" class="calcBtn"/>
-                <input type="submit" value="=" name="btnNumEqual" class="calcBtn"/>
-                <input type="submit" value="/" name="btnNumDiv" class="calcBtn"/>
-                <input type="submit" value="x" name="btnNumMult" class="calcBtn"/>
-                <input type="submit" value="AC" name="btnNumClear" class="calcBtn"/>
-            </section>
-        </section>
-    </main>
+    <header></header>
 
+    <div id="calcMain">
+        <div id="calcContainer">
+            <section id="calcSection">
+                <input type="text" name="txtBox" id="calcTxtBoxID"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+
+                <div class="calcBtn">
+                    <button class="calcButtons" id="operatorBtn">/</button>
+                    <button class="calcButtons" id="clearBtn">AC</button>
+                    <button class="calcButtons" id="operatorBtn">*</button>
+                    <button class="calcButtons" id="7">7</button>
+                    <button class="calcButtons" id="8">8</button>
+                    <button class="calcButtons" id="9">9</button>
+                    <button class="calcButtons" id="4">4</button>
+                    <button class="calcButtons" id="5">5</button>
+                    <button class="calcButtons" id="6">6</button>
+                    <button class="calcButtons" id="1">1</button>
+                    <button class="calcButtons" id="2">2</button>
+                    <button class="calcButtons" id="3">3</button>
+                    <button class="calcButtons" id="operatorBtn">-</button>
+                    <button class="calcButtons" id="0">0</button>
+                    <button class="calcButtons" id="operatorBtn">+</button>
+
+                    <button class="calcButtons" id="equalBtn">=</button>
+                    <button class="calcButtons" id="decimalBtn">.</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
