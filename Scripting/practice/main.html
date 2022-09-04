@@ -8,12 +8,15 @@
 </head>
 <body>
     <p></p>
+    <button id="justAButton">Button</button>
     <script>
-        let aNumber = 1;
-        let bNumber = 2;
+        
+        let someButtons = document.getElementById("justAButton");
 
-        let addition =  () => aNumber+bNumber;
-        let evenOdd = bNumber % 2 == 0 ? "even": "odd";
+        someButtons.addEventListener('click', (e) => {
+            window.alert(e.target.innerText);
+        });
+
 
     </script>
 </body>
