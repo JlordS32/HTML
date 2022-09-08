@@ -1,4 +1,5 @@
 let textbox = document.getElementById("calcTxtBoxID");
+console.log("hello");
 
 let numberButtons = Array.from(document.getElementsByClassName("calcButtons"));
 
@@ -11,7 +12,7 @@ numberButtons.map( button => {
                 break
             case "+":
                 textbox.value += "+";
-                break;
+                break; 
             case "/":
                 textbox.value += "/";
                 break;
