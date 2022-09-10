@@ -5,8 +5,11 @@ const c = canvas.getContext('2d');
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
+const playerJumpForce = 6;  
+let scrollOffset = 0;
 const gravity = 0.1;
 
+// Player class
 class Player{
     constructor(){
         // player position
@@ -42,9 +45,31 @@ class Player{
     };
 };
 
+// Platform class for platform objects
+class Platform{
+    constructor({x, y, width, height}){
+        this.position = {
+            x,
+            y   
+        };
+
+        this.width = width;
+        this.height = height;
+    };
+
+    draw(){
+        c.fillStyle = 'black';
+        c.fillRect(this.position.x, this.position.y, this.width, this.height);
+    };
+};
+
 // instantiating player class
 const player = new Player();
-player.draw();
+const platforms = [new Platform({x: 300, y: 300, width: 180, height: 20}), 
+                   new Platform({x: 700, y: 400, width: 200, height: 20}),
+                   new Platform({x: 100, y: 200, width: 150, height: 20}),
+                   new Platform({x: 500, y: 550, width: 100, height: 20})];
+
 // keys
 const keys = {
     right: {
@@ -55,22 +80,50 @@ const keys = {
     }
 };
 
+// Game animation. This function refreshes the game for every frame.
 function animate(){
     requestAnimationFrame(animate);
     c.clearRect(0,0, canvas.width, canvas.height);
     player.update();
+    platforms.forEach(platform => {
+        platform.draw();
+    });
 
-    if (keys.right.pressed) {
+    if (keys.right.pressed && player.position.x < 500) {
         player.velocity.x = 2.5;
     }
-    else if (keys.left.pressed) {
+    else if (keys.left.pressed && player.position.x > 100) {
         player.velocity.x = -2.5;
     }
     else
     {
         player.velocity.x = 0;
+
+        if (keys.right.pressed){
+            scrollOffset += 5;
+            platforms.forEach(platform => {
+                platform.position.x -= 2.5;
+            });
+        }
+
+        else if (keys.left.pressed){
+            scrollOffset -= 5;
+            platforms.forEach(platform => {
+                platform.position.x += 2.5;
+            });
+        }
     }
-};
+
+    platforms.forEach(platform => {
+        if (player.position.y + player.height <= platform.position.y &&     player.position.y + player.height + player.velocity.y >= platform.position.y && player.position.x + player.width >= platform.position.x && player.position.x <= platform.position.x + platform.width ){
+                player.velocity.y = 0;
+            }
+    });
+
+    if (scrollOffset == 1000){
+        console.log('you win')
+    };
+ };
 
 animate();
 
@@ -79,20 +132,13 @@ window.addEventListener('keydown', (e) => {
         case 'a':
         case 'ArrowLeft':
             keys.left.pressed = true;
-            console.log(keys.left.pressed);
             break;
         case 's':
         case 'ArrowDown':
-            console.log('down');
             break;
         case 'd':
         case "ArrowRight":
             keys.right.pressed = true;
-            console.log(keys.right.pressed);
-            break;
-        case 'w':
-        case "ArrowUp":
-            player.velocity.y -= 5;
             break;
     };
 });
@@ -102,7 +148,6 @@ window.addEventListener('keyup', (e) => {
         case 'a':
         case 'ArrowLeft':
             keys.left.pressed = false;
-            console.log(keys.left.pressed);
             break;
         case 's':
         case 'ArrowDown':
@@ -111,11 +156,13 @@ window.addEventListener('keyup', (e) => {
         case 'd':
         case "ArrowRight":
             keys.right.pressed = false;
-            console.log(keys.right.pressed);
             break;
+        case ' ':
         case 'w':
         case "ArrowUp":
-            player.velocity.y -= 5;
-            break;
-    };
-});
+            if (player.velocity.y == 0)
+                player.velocity.y -= playerJumpForce; 
+            break;  
+     };
+}); 
+ 
