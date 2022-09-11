@@ -11,12 +11,34 @@
         body
         {
             margin: 0;
-            outline: 0 red solid;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        canvas
+        {
+            border-radius: 20px;
+            min-height: 80vh;
+        }
+
+        main h1
+        {
+            color: white;
+            display: flex;
+            justify-content: center;
+            font-family: monospace;
+            font-size: 50px;
         }
 
     </style>
-    <canvas>
-    </canvas>
+
+    <main>
+        <h1>Game</h1>
+        <canvas></canvas>
+    </main>
     <script src="index.js" type="module"></script>
 </body>
 </html>
