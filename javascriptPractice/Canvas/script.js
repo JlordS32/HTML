@@ -2,10 +2,7 @@ window.addEventListener("load", () => {
     const canvas = document.querySelector("#canvas");
     const context = canvas.getContext("2d");
 
-    canvas.height = innerWidth;
-    canvas.width = innerWidth;
-
-    let painting= false;
+    let painting = false;
 
     function startPosition(){
         painting = true;
@@ -33,7 +30,7 @@ window.addEventListener("load", () => {
     canvas.addEventListener('mousedown', startPosition);
     canvas.addEventListener('mouseup', endPosition);
     canvas.addEventListener('mousemove', draw);
-});\watch
+});
 
 /*
 context2.strokeStyle = "green";

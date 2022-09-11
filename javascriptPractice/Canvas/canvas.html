@@ -8,54 +8,9 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <canvas id="canvas"></canvas>
+    <canvas id="canvas" width="500" height="500"></canvas>
 
-    <script>
-
-
-        const canvas = document.querySelector("#canvas");
-        const ctx = canvas.getContext("2d");
-
-        canvas.height = innerHeight;
-        canvas.width = innerWidth;
-
-        let painting = false;
-        
-        window.addEventListener("load", () => {
-
-            function startPosition() {
-                painting = true;
-                console.log("Start positioning");
-            };
-
-            function endPosition() {
-                painting = false;
-                console.log("endPosition");
-            };
-
-            function draw(e){
-                if (!painting) {
-                    console.log("not drawing");
-                    ctx.beginPath();
-                    return;};
-
-                console.log("drawing...");
-                ctx.lineWidth = 1;
-                ctx.lineCap = "round";
-                ctx.strokeStyle = "black";
-
-                ctx.lineTo(e.clientX, e.clientY);
-                ctx.stroke();   
-                ctx.beginPath();
-                ctx.moveTo(e.clientX, e.clientY);
-            };
-
-            canvas.addEventListener('mousedown', startPosition);
-            canvas.addEventListener('mouseup', endPosition);
-            canvas.addEventListener('mousemove', draw);
-        });
-
-        
+    <script src="script.js"></script>
     </script>
 </body>
 </html>
